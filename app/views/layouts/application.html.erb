@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="welcome">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -44,13 +44,11 @@
         </li>
       </ul>
 
-      // adds search form to website header
       <%= form_tag articles_path, :method => 'get' do %>
         <%= text_field_tag :search, name="search", params[:search], placeholder: "Dept. ID or Course" aria-label="Search"%>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       <% end %>
 
-      // adds login and sign up buttons to website header
       <div style="padding-left: 10px;">
       <form class="form-inline">
       <button class="btn btn-outline-primary" type="button">Login</button>
