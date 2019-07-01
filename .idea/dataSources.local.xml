@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails awesome-276-sfu-book: production" uuid="d5698ff2-19e8-4a48-8be1-17582aa7e2a4">
+      <database-info product="PostgreSQL" version="11.4 (Ubuntu 11.4-1.pgdg16.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.4" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>dwyltvxwazbqhj</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
+    </data-source>
+    <data-source name="Rails awesome-276-sfu-book: test" uuid="6a5b23ff-b88f-424d-be8b-e69c9c3382ed">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>myapp</user-name>
+    </data-source>
+    <data-source name="Rails awesome-276-sfu-book: development" uuid="b6351428-8cf7-42d6-bb69-9b38317832ba">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>myapp</user-name>
+    </data-source>
+  </component>
+</project>

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :welcome
   resources :courses
+  # resources :search, only: [:index]
   root 'welcome#index'
 end

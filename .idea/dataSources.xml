@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails awesome-276-sfu-book: production" uuid="d5698ff2-19e8-4a48-8be1-17582aa7e2a4">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-83-36-37.compute-1.amazonaws.com:5432/d8gfmbl2vncu8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails awesome-276-sfu-book: test" uuid="6a5b23ff-b88f-424d-be8b-e69c9c3382ed">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/myapp_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails awesome-276-sfu-book: development" uuid="b6351428-8cf7-42d6-bb69-9b38317832ba">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/myapp_development</jdbc-url>
+    </data-source>
+  </component>
+</project>
