@@ -4,14 +4,21 @@
 
 <h1>Courses</h1>
 
+<div class="form-inline mt-2 mt-md-0">
+  <%= form_tag courses_path, :method => 'get' do %>
+    <%= text_field_tag :search, nil, placeholder: "Course # or subject", class: "form-control mr-sm-2"%>
+    <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+</div>
+
 <!--list of attributes to show-->
 <table>
   <tr>
     <th>Subject</th>
     <th>Course Number</th>
     <th>Credits</th>
-    <th>Corequisites</th>
     <th>Prerequisites</th>
+    <th>Corequisites</th>
     <th></th>
   </tr>
 
