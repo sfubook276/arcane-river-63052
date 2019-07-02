@@ -16,16 +16,11 @@
 
   <% @courses.each do |course| %>
     <tr>
-
-<!--      <td><%#= course.subject %></td>-->
-<!--      <td><%#= course.number %></td>-->
-<!--      <td><%#= course.credits %></td>-->
-<!--      <td><%#= course.prerequisites %></td>-->
-<!--      <td><%#= course.corequisites %></td>-->
-
-      <td><%= course.name %></td>
-      <td><%= course.action %></td>
-      <td><%= course.information %></td>
+      <td><%= course.subject %></td>
+      <td><%= course.number %></td>
+      <td><%= course.credits %></td>
+      <td><%= course.prerequisites %></td>
+      <td><%= course.corequisites %></td>
       <td><%= link_to 'Show', course_path(course) %></td>
     </tr>
   <% end %>
