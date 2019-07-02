@@ -1,24 +1,25 @@
 class CoursesController < ApplicationController
     def index
-        @articles = Article.all
+        @courses = Course.all
     end
 
     def show
-        @article = Article.find(params[:id])
+        @course = Course.find(params[:id])
     end
 
     def new
     end
 
     def create
-        @article = Article.new(article_params)
+        @course = Course.new(course_params)
 
-        @article.save
-        redirect_to @article
+        @course.save
+        redirect_to @course
     end
 
     private
-    def article_params
-        params.require(:article).permit(:title, :text)
+    def course_params
+        params.require(:course).permit(:subject, :number, :credits, :prerequisites, :corequisites)
     end
+
 end
