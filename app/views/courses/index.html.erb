@@ -3,11 +3,25 @@
 <br />
 
 <h1>Courses</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
-<p>
-  Here are all the courses.
-</p>
 
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Course Number</th>
+    <th>Credits</th>
+    <th>Corequisites</th>
+    <th>Prerequisites</th>
+    <th></th>
+  </tr>
+
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.subject %></td>
+      <td><%= course.number %></td>
+      <td><%= course.credits %></td>
+      <td><%= course.prerequisites %></td>
+      <td><%= course.corequisites %></td>
+      <td><%= link_to 'Show', course_path(course) %></td>
+    </tr>
+  <% end %>
+</table>

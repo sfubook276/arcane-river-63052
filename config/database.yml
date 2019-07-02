@@ -23,13 +23,13 @@ default: &default
 
 development:
   # <<: *default
-  # database: myapp2_development 
-    adapter: postgresql  
-    encoding: unicode  
-    database: myapp_development  
-    pool: 5  
-    username: myapp  
-    password: password1  
+  # database: myapp2_development
+    adapter: postgresql
+    encoding: unicode
+    database: myapp_development
+    pool: 5
+    username: myapp
+    password: password1
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -64,11 +64,11 @@ development:
 test:
   # <<: *default
   # database: myapp2_test 
-  adapter: postgresql  
-  encoding: unicode  
-  database: myapp_test  
-  pool: 5  
-  username: myapp  
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  pool: 5
+  username: myapp
   password: password1
 
 # As with config/secrets.yml, you never want to store sensitive information,
