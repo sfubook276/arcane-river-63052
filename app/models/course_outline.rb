@@ -1,0 +1,2 @@
+class CourseOutline < ApplicationRecord
+end

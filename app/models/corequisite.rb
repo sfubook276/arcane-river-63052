@@ -1,0 +1,2 @@
+class Corequisite < ApplicationRecord
+end

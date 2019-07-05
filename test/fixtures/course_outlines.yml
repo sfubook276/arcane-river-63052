@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: MyString
+  semester: MyString
+  department: MyString
+  number: 1
+  title: MyString
+  courseSection: MyString
+  outlinePath: MyString
+  deliveryMethod: MyString
+  departmentalUgradNotes: MyString
+  designation: MyString
+  type: 
+  courseDetails: MyString
+  prerequisites: MyString
+  description: MyString
+  name: MyString
+  educationGoals: MyString
+  classNumber: MyString
+  shortNote: MyString
+  section: MyString
+  units: MyString
+  corequisites: MyString
+  registrarNotes: MyString
+  gradingNotes: MyString
+  term: MyString
+  notes: MyString
+  degreeLevel: MyString
+
+two:
+  year: MyString
+  semester: MyString
+  department: MyString
+  number: 1
+  title: MyString
+  courseSection: MyString
+  outlinePath: MyString
+  deliveryMethod: MyString
+  departmentalUgradNotes: MyString
+  designation: MyString
+  type: 
+  courseDetails: MyString
+  prerequisites: MyString
+  description: MyString
+  name: MyString
+  educationGoals: MyString
+  classNumber: MyString
+  shortNote: MyString
+  section: MyString
+  units: MyString
+  corequisites: MyString
+  registrarNotes: MyString
+  gradingNotes: MyString
+  term: MyString
+  notes: MyString
+  degreeLevel: MyString
