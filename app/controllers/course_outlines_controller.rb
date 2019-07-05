@@ -1,0 +1,2 @@
+class CourseOutlinesController < ApplicationController
+end

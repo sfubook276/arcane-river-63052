@@ -1,0 +1,2 @@
+class CorequisitesController < ApplicationController
+end
