@@ -1,0 +1,19 @@
+<br><br><br>
+<h1>Grade Outlines</h1>
+
+<table>
+  <tr>
+    <th>description</th>
+    <th>weight</th>
+    <th></th>
+  </tr>
+
+  <% @grades.each do |grade| %>
+    <tr>
+      <td><%= grade.description %></td>
+      <td><%= grade.weight %></td>
+      <td><%= link_to 'Show', grade_path(grade) %></td>
+    </tr>
+  <% end %>
+</table>
+

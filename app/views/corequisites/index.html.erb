@@ -1,0 +1,24 @@
+<br><br><br>
+<h1>Corequisites</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Course Number</th>
+    <th>Requisite of Department</th>
+    <th>Requisites of Course Number</th>
+    <th>Relationship</th>
+    <th></th>
+  </tr>
+
+  <% @corequisites.each do |corequisite| %>
+    <tr>
+      <td><%= corequisite.department %></td>
+      <td><%= corequisite.courseNumber %></td>
+      <td><%= corequisite.requisiteOfDepartment %></td>
+      <td><%= corequisite.requisitesofCourseNumber %></td>
+      <td><%= corequisite.relationship %></td>
+      <td><%= link_to 'Show', corequisite_path(corequisite) %></td>
+    </tr>
+  <% end %>
+</table>

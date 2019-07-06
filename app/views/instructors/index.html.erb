@@ -1,0 +1,33 @@
+<br><br><br>
+<h1>Instructors</h1>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>commonName</th>
+    <th>officeName</th>
+    <th>officeHours</th>
+    <th>email</th>
+    <th>phone</th>
+    <th>roleCode</th>
+    <th>profileUrl</th>
+    <th></th>
+  </tr>
+
+  <% @instructors.each do |instructor| %>
+    <tr>
+      <td><%= instructor.fName %></td>
+      <td><%= instructor.lName %></td>
+      <td><%= instructor.commonName %></td>
+      <td><%= instructor.officeName %></td>
+      <td><%= instructor.officeHours %></td>
+      <td><%= instructor.email %></td>
+      <td><%= instructor.phone %></td>
+      <td><%= instructor.roleCode %></td>
+      <td><%= instructor.profileUrl %></td>
+
+      <td><%= link_to 'Show', instructor_path(instructor) %></td>
+    </tr>
+  <% end %>
+</table>

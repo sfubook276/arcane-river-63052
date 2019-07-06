@@ -1,0 +1,24 @@
+<br><br><br>
+<h1>Prerequisites</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Course Number</th>
+    <th>Requisite of Department</th>
+    <th>Requisites of Course Number</th>
+    <th>Relationship</th>
+    <th></th>
+  </tr>
+
+  <% @prequisites.each do |prerequisite| %>
+    <tr>
+      <td><%= prerequisite.department %></td>
+      <td><%= prerequisite.courseNumber %></td>
+      <td><%= prerequisite.requisiteOfDepartment %></td>
+      <td><%= prerequisite.requisitesofCourseNumber %></td>
+      <td><%= prerequisite.relationship %></td>
+      <td><%= link_to 'Show', prerequisite_path(prerequisite) %></td>
+    </tr>
+  <% end %>
+</table>

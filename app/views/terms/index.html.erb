@@ -1,0 +1,17 @@
+<br><br><br>
+<h1>Terms</h1>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Semester</th>
+    <th></th>
+  </tr>
+
+  <% @terms.each do |term| %>
+    <tr>
+      <td><%= term.name %></td>
+      <td><%= link_to 'Show', term_path(term) %></td>
+    </tr>
+  <% end %>
+</table>

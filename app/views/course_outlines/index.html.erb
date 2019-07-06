@@ -1,0 +1,47 @@
+<br><br><br>
+<h1>Course Outlines</h1>
+
+<table>
+  <tr>
+    <th>year</th>
+    <th>semester</th>
+    <th>department</th>
+    <th>number</th>
+    <th>title</th>
+    <th>courseSection</th>
+<!--    <th>outlinePath</th>-->
+<!--    <th>deliveryMethod</th>-->
+<!--    <th>departmentalUgradNotes</th>-->
+<!--    <th>designation</th>-->
+<!--    <th>type</th>-->
+<!--    <th>courseDetails</th>-->
+<!--    <th>prerequisites</th>-->
+<!--    <th>description</th>-->
+<!--    <th>name</th>-->
+<!--    <th>educationGoals</th>-->
+<!--    <th>classNumber</th>-->
+<!--    <th>shortNote</th>-->
+<!--    <th>section</th>-->
+<!--    <th>units</th>-->
+<!--    <th>corequisites</th>-->
+<!--    <th>registrarNotes</th>-->
+<!--    <th>gradingNotes</th>-->
+<!--    <th>term</th>-->
+<!--    <th>notes</th>-->
+<!--    <th>degreeLevel</th>-->
+    <th></th>
+  </tr>
+
+  <% @course_outlines.each do |course_outline| %>
+    <tr>
+      <td><%= course_outline.year %></td>
+      <td><%= course_outline.semester %></td>
+      <td><%= course_outline.department %></td>
+      <td><%= course_outline.number %></td>
+      <td><%= course_outline.title %></td>
+      <td><%= course_outline.courseSection %></td>
+      <td><%= link_to 'Show', course_outline_path(course_outline) %></td>
+    </tr>
+  <% end %>
+</table>
+

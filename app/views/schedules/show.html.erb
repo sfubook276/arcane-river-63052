@@ -1,0 +1,46 @@
+<br><br><br>
+
+<h1>Schedule Details</h1>
+
+<p>
+  <strong>Start Time:</strong>
+  <%= @schedule.startTime %>
+</p>
+<p>
+  <strong>Start Date:</strong>
+  <%= @schedule.startDate %>
+</p>
+<p>
+  <strong>End Time:</strong>
+  <%= @schedule.endTime %>
+</p>
+<p>
+  <strong>End Date:</strong>
+  <%= @schedule.endDate %>
+</p>
+<p>
+  <strong>Section Code:</strong>
+  <%= @schedule.sectionCode %>
+</p>
+<p>
+  <strong>Exam:</strong>
+  <%= @schedule.isExam %>
+</p>
+<p>
+  <strong>Days:</strong>
+  <%= @schedule.days %>
+</p>
+<p>
+  <strong>Campus:</strong>
+  <%= @schedule.campus %>
+</p>
+<p>
+  <strong>Building Code:</strong>
+  <%= @schedule.buildingCode %>
+</p>
+<p>
+  <strong>Room Number:</strong>
+  <%= @schedule.roomNumber %>
+</p>
+
+<%= link_to 'Back', schedules_path %>

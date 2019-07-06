@@ -1,0 +1,34 @@
+<br><br><br>
+<h1>Schedules</h1>
+
+<table>
+  <tr>
+    <th>Start Time</th>
+    <th>Start Date</th>
+    <th>End Time</th>
+    <th>End Date</th>
+    <th>Section Code</th>
+    <th>Exam</th>
+    <th>Days</th>
+    <th>Campus</th>
+    <th>BuildingCode</th>
+    <th>Room Number</th>
+    <th></th>
+  </tr>
+
+  <% @schedules.each do |schedules| %>
+    <tr>
+      <td><%= schedules.startTime %></td>
+      <td><%= schedules.startDate %></td>
+      <td><%= schedules.endTime %></td>
+      <td><%= schedules.endDate %></td>
+      <td><%= schedules.sectionCode %></td>
+      <td><%= schedules.isExam %></td>
+      <td><%= schedules.days %></td>
+      <td><%= schedules.campus %></td>
+      <td><%= schedules.buildingCode %></td>
+      <td><%= schedules.roomNumber %></td>
+      <td><%= link_to 'Show', schedules_path(schedules) %></td>
+    </tr>
+  <% end %>
+</table>

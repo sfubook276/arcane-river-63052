@@ -6,6 +6,17 @@ Rails.application.routes.draw do
 
   resources :welcome
   resources :courses
+  resources :campuses
+  resources :corequisites
+  resources :course_outlines
+  resources :departments
+  resources :grades
+  resources :instructors
+  resources :prerequisites
+  resources :schedules
+  resources :terms
+  resources :years
+
   # resources :search, only: [:index]
   root 'welcome#index'
 end

@@ -1,0 +1,24 @@
+<br><br><br>
+<h1>Campuses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Province</th>
+    <th>Postal Code</th>
+    <th></th>
+  </tr>
+
+  <% @campuses.each do |campus| %>
+    <tr>
+      <td><%= campus.name %></td>
+      <td><%= campus.address %></td>
+      <td><%= campus.city %></td>
+      <td><%= campus.province %></td>
+      <td><%= campus.postalCode %></td>
+      <td><%= link_to 'Show', campuses_path(campus) %></td>
+    </tr>
+  <% end %>
+</table>

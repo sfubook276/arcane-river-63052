@@ -1,0 +1,16 @@
+<br><br><br>
+<h1>Years</h1>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th></th>
+  </tr>
+
+  <% @years.each do |year| %>
+    <tr>
+      <td><%= year.name %></td>
+      <td><%= link_to 'Show', year_path(year) %></td>
+    </tr>
+  <% end %>
+</table>
