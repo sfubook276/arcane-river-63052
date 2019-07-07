@@ -1,7 +1,10 @@
 class CoursesController < ApplicationController
+    http_basic_authenticate_with name: "admin", password: "thestartupguys276", except: [:index, :show]
+
     def index
         # @courses = Course.all
-        @courses = Course.search(params[:search])
+        @courses = Course.search(params[:search]).all.order(:subject)
+        # all.order(:subject) sorts by subject
     end
 
     def show
