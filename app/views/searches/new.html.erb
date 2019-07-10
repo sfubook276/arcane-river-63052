@@ -1,0 +1,31 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+  <div class="field">
+    <%= s.label :Year %>
+    <pre><%= s.text_field :year %></pre>
+  </div>
+
+  <div class="field">
+    <%= s.label :Semester %>
+    <pre><%= s.text_field :semester %></pre>
+  </div>
+
+  <div class="field">
+    <%= s.label :Department %>
+    <pre><%= s.text_field :subject %></pre>
+  </div>
+
+  <div class="field">
+    <%= s.label :Course_Number %>
+    <pre><%= s.text_field :number %></pre>
+  </div>
+
+  <div class="actions">
+    <%= s.submit "Search", class: "btn btn-success my-2 my-sm-0" %>
+  </div>
+
+<% end %>
+
+<p><%= link_to 'Back', courses_path %></p>

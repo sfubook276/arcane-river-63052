@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :schedules
   resources :terms
   resources :years
+  resources :searches
 
   # resources :search, only: [:index]
   root 'welcome#index'

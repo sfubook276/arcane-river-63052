@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_05_192318) do
+ActiveRecord::Schema.define(version: 2019_07_10_184724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 2019_07_05_192318) do
     t.text "corequisites"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "year"
+    t.string "semester"
   end
 
   create_table "departments", force: :cascade do |t|
@@ -124,6 +126,15 @@ ActiveRecord::Schema.define(version: 2019_07_05_192318) do
     t.string "campus"
     t.string "buildingCode"
     t.string "roomNumber"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "year"
+    t.string "semester"
+    t.string "subject"
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
