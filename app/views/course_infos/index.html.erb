@@ -1,8 +1,8 @@
 <h1>Course Info</h1>
 
-<%= form_tag courses_path, :method => 'get' do %>
+<%= form_tag course_infos_path, :method => 'get' do %>
   <%= text_field_tag :search, params[:search], placeholder: "Course # or 'SUBJECT'"%>
-  <%#= submit_tag "Search" %>
+  <%= submit_tag "Search" %>
   <%= submit_tag "Search", class: "btn btn-success my-2 my-sm-0"%>
 <% end %>
 
@@ -10,26 +10,27 @@
 
 <table>
   <tr>
-    <th>Subject</th>
-    <th>Course Number</th>
-    <th>Credits</th>
     <th>Year</th>
     <th>Semester</th>
+    <th>Department</th>
+    <th>Number</th>
+    <th>Section</th>
+    <th>Description</th>
     <th>Prerequisites</th>
     <th>Corequisites</th>
     <th></th>
   </tr>
 
-  <% @courses.each do |course| %>
+  <% @course_infos.each do |course_info| %>
     <tr>
-      <td><%= course.subject %></td>
-      <td><%= course.number %></td>
-      <td><%= course.credits %></td>
-      <td><%= course.year %></td>
-      <td><%= course.semester %></td>
-      <td><%= course.prerequisites %></td>
-      <td><%= course.corequisites %></td>
-      <td><%= link_to 'Details', course_path(course) %></td>
+      <td><%= course_info.year %></td>
+      <td><%= course_info.semester %></td>
+      <td><%= course_info.department %></td>
+      <td><%= course_info.coursenumber %></td>
+      <td><%= course_info.section %></td>
+      <td><%= course_info.info_description %></td>
+      <td><%= course_info.info_prerequisites %></td>
+      <td><%= course_info.info_corequisites %></td>
     </tr>
   <% end %>
 </table>
