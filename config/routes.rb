@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :welcome
   resources :courses
+  resources :course_infos
   resources :campuses
   resources :corequisites
   resources :course_outlines
