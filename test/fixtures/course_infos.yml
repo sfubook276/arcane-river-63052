@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: MyText
+  semester: MyText
+  department: MyText
+  coursenumber: MyText
+  section: MyText
+  info_description: MyText
+  info_prerequisites: MyText
+  info_corequisites: MyText
+
+two:
+  year: MyText
+  semester: MyText
+  department: MyText
+  coursenumber: MyText
+  section: MyText
+  info_description: MyText
+  info_prerequisites: MyText
+  info_corequisites: MyText

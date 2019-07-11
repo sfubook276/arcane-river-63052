@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_184724) do
+ActiveRecord::Schema.define(version: 2019_07_11_190816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,19 @@ ActiveRecord::Schema.define(version: 2019_07_10_184724) do
     t.string "requisiteOfDepartment"
     t.integer "requisitesofCourseNumber"
     t.string "relationship"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "course_infos", force: :cascade do |t|
+    t.text "year"
+    t.text "semester"
+    t.text "department"
+    t.text "coursenumber"
+    t.text "section"
+    t.text "info_description"
+    t.text "info_prerequisites"
+    t.text "info_corequisites"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,6 +77,44 @@ ActiveRecord::Schema.define(version: 2019_07_10_184724) do
     t.string "degreeLevel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "courseinfo", id: false, force: :cascade do |t|
+    t.text "year"
+    t.text "semester"
+    t.text "department"
+    t.text "coursenumber"
+    t.text "section"
+    t.text "info_departmentalugradnotes"
+    t.text "info_degreelevel"
+    t.text "info_coursedetails"
+    t.text "info_number"
+    t.text "info_outlinepath"
+    t.text "info_gradingnotes"
+    t.text "info_title"
+    t.text "info_classnumber"
+    t.text "info_section"
+    t.text "info_units"
+    t.text "info_type"
+    t.text "info_specialtopic"
+    t.text "info_description"
+    t.text "info_corequisites"
+    t.text "info_deliverymethod"
+    t.text "info_registrarnotes"
+    t.text "info_term"
+    t.text "info_name"
+    t.text "info_designation"
+    t.text "info_prerequisites"
+    t.text "info_notes"
+    t.text "info_dept"
+    t.text "info_graduatestudiesnotes"
+    t.text "info_departmentalgradnotes"
+    t.text "info_shortnote"
+    t.text "info_codenotes"
+    t.text "info_materials"
+    t.text "info_requirements"
+    t.text "info_educationalgoals"
+    t.text "info_instructornotes"
   end
 
   create_table "courses", force: :cascade do |t|
