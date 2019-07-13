@@ -2,7 +2,6 @@
 
 <%= form_tag course_infos_path, :method => 'get' do %>
   <%= text_field_tag :search, params[:search], placeholder: "Course # or 'SUBJECT'"%>
-  <%= submit_tag "Search" %>
   <%= submit_tag "Search", class: "btn btn-success my-2 my-sm-0"%>
 <% end %>
 

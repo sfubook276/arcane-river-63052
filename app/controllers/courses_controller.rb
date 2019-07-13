@@ -3,12 +3,14 @@ class CoursesController < ApplicationController
 
     def index
         # @courses = Course.all
-        @courses = Course.search(params[:search]).all.order(:subject)
+        # @courses = Course.search(params[:search]).all.order(:subject)
+        @course_infos = CourseInfo.search(params[:search]).all.order(:department) # test if can view data from course_info
         # all.order(:subject) sorts by subject
     end
 
     def show
-        @course = Course.find(params[:id])
+        # @course = Course.find(params[:id])
+        @course_infos = CourseInfo.find(params[:id])
     end
 
     def new

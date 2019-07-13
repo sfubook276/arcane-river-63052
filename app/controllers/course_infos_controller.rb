@@ -19,6 +19,6 @@ class CourseInfosController < ApplicationController
 
   private
   def course_info_params
-    params.require(:course).permit(:year, :semester, :department, :coursenumber, :section, :info_description, :info_prerequisites, :info_corequisites)
+    params.require(:course_info).permit(:year, :semester, :department, :coursenumber, :section, :info_description, :info_prerequisites, :info_corequisites)
   end
 end

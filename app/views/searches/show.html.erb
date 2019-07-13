@@ -1,7 +1,5 @@
 <h1>Search Results</h1>
 
-
-
 <%= form_for @search, html: {class: "pure-form"} do |s| %>
 
   <div class="field">
@@ -13,11 +11,11 @@
   </div>
 
   <div class="field">
-    <pre><%= s.label :Department %>      <%= s.text_field :subject %></pre>
+    <pre><%= s.label :Department %>      <%= s.text_field :department %></pre>
   </div>
 
   <div class="field">
-    <pre><%= s.label :Course_Number %>   <%= s.text_field :number %></pre>
+    <pre><%= s.label :Course_Number %>   <%= s.text_field :coursenumber %></pre>
   </div>
 
   <div class="actions">
@@ -31,7 +29,7 @@
 
 <%= link_to 'Search Again', new_search_path %></p>
 
-<% if @search.search_courses.empty? %>
+<% if @search.search_course_infos.empty? %>
   <p>No Course Found</p>
 
 <% else %>
@@ -49,13 +47,13 @@
           <th></th>
         </tr>
 
-        <% @search.search_courses.each do |c| %>
+        <% @search.search_course_infos.each do |c| %>
           <tr>
             <td><%= c.subject %></td>
             <td><%= c.number %></td>
             <td><%= c.credits %></td>
             <td><%= c.year %></td>
-            <td><%= c.semester %></td>
+            <td><%= c.department %></td>
             <td><%= c.prerequisites %></td>
             <td><%= c.corequisites %></td>
             <td><%= link_to 'Details', course_path %></td>
