@@ -16,7 +16,6 @@ class Search < ApplicationRecord
     course_infos = course_infos.where(["semester ILIKE ?", "%#{semester}%"]) if semester.present?
     course_infos = course_infos.where(["department ILIKE ?", "%#{department}%"]) if department.present?
     course_infos = course_infos.where(["cast(coursenumber as text) ILIKE ?", "%#{coursenumber}%"]) if coursenumber.present?
-    course_infos = course_infos.where(["cast(info_prerequisites as text) ILIKE ?", "%#{info_prerequisites}%"]) if info_prerequisites.present?
 
     return course_infos
 

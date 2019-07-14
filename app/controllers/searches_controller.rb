@@ -20,6 +20,6 @@ class SearchesController < ApplicationController
   private
 
   def search_params
-    params.require(:search).permit(:year, :semester, :department, :coursenumber)
+    params.require(:search).permit(:year, :semester, :department, :coursenumber, :info_prerequisites)
   end
 end

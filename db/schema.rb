@@ -186,6 +186,7 @@ ActiveRecord::Schema.define(version: 2019_07_14_083413) do
     t.string "semester"
     t.string "department"
     t.string "coursenumber"
+    t.string "info_prerequisites"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
