@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
 
     def show
         # @course = Course.find(params[:id])
-        @course_infos = CourseInfo.find(params[:id])
+        @course_info = CourseInfo.find(params[:id])
     end
 
     def new

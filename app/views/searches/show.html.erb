@@ -31,7 +31,7 @@
 
 <p><%= link_to 'Back to Courses page', courses_path %><br>
 
-<%= link_to 'Search Again', new_search_path %></p>
+<%= link_to 'Back to Advanced Search', new_search_path %></p>
 
 <% if @search.search_course_infos.empty? %>
   <p>No Course Found</p>
@@ -41,8 +41,9 @@
     <div class="div">
       <table>
         <tr>
-          <th>Subject</th>
+          <th>Department</th>
           <th>Course Number</th>
+          <th>Section</th>
           <th>Year</th>
           <th>Semester</th>
           <th>Prerequisites</th>
@@ -54,10 +55,12 @@
           <tr>
             <td><%= c.department %></td>
             <td><%= c.coursenumber %></td>
+            <td><%= c.section %></td>
             <td><%= c.year %></td>
             <td><%= c.semester %></td>
             <td><%= c.info_prerequisites %></td>
             <td><%= c.info_corequisites %></td>
+            <td><%= link_to 'Details', search_path(@search) %></td>
           </tr>
         <% end %>
       </table>

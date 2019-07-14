@@ -1,38 +1,33 @@
 <!--view to show attributes-->
 <h3>Course Details</h3>
 <p>
-  <strong>subject:</strong>
-  <%= @course.subject %>
+  <strong>Department:</strong>
+  <%= @course_info.department %>
 </p>
 
 <p>
-  <strong>number:</strong>
-  <%= @course.number %>
+  <strong>Number:</strong>
+  <%= @course_info.coursenumber %>
 </p>
 
 <p>
-  <strong>credits:</strong>
-  <%= @course.credits %>
+  <strong>Year:</strong>
+  <%= @course_info.year %>
 </p>
 
 <p>
-  <strong>year:</strong>
-  <%= @course.year %>
+  <strong>Semester:</strong>
+  <%= @course_info.semester %>
 </p>
 
 <p>
-  <strong>semester:</strong>
-  <%= @course.semester %>
+  <strong>Pre-requisites:</strong>
+  <%= @course_info.info_prerequisites %>
 </p>
 
 <p>
-  <strong>pre-requisites:</strong>
-  <%= @course.prerequisites %>
-</p>
-
-<p>
-  <strong>co-requisites:</strong>
-  <%= @course.corequisites %>
+  <strong>Co-requisites:</strong>
+  <%= @course_info.info_corequisites %>
 </p>
 
 <%= link_to 'Back', courses_path %>

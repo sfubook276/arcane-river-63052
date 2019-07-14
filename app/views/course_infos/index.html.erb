@@ -30,6 +30,7 @@
       <td><%= course_info.info_description %></td>
       <td><%= course_info.info_prerequisites %></td>
       <td><%= course_info.info_corequisites %></td>
+      <td><%= link_to 'Details', course_path(course) %></td>
     </tr>
   <% end %>
 </table>
