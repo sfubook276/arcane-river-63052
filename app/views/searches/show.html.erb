@@ -39,7 +39,6 @@
         <tr>
           <th>Subject</th>
           <th>Course Number</th>
-<!--          <th>Credits</th>-->
           <th>Year</th>
           <th>Semester</th>
           <th>Prerequisites</th>
@@ -51,12 +50,10 @@
           <tr>
             <td><%= c.department %></td>
             <td><%= c.coursenumber %></td>
-<!--            <td><%#= c.credits %></td>-->
             <td><%= c.year %></td>
             <td><%= c.semester %></td>
             <td><%= c.info_prerequisites %></td>
             <td><%= c.info_corequisites %></td>
-<!--            <td><%#= link_to 'Details', course_path %></td>-->
           </tr>
         <% end %>
       </table>
