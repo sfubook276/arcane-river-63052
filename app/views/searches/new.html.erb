@@ -3,28 +3,23 @@
 <%= form_for @search, html: {class: "pure-form"} do |s| %>
 
   <div class="field">
-    <%= s.label :Year %>
-    <pre><%= s.text_field :year %></pre>
+    <pre><%= s.label :Year %>            <%= s.text_field :year %></pre>
   </div>
 
   <div class="field">
-    <%= s.label :Semester %>
-    <pre><%= s.text_field :semester %></pre>
+    <pre><%= s.label :Semester %>        <%= s.select :semester, options_for_select(@course_infos), :prompt_text => "Select a category", :include_blank => true%></pre>
   </div>
 
   <div class="field">
-    <%= s.label :Department %>
-    <pre><%= s.text_field :department %></pre>
+    <pre><%= s.label :Department %>      <%= s.text_field :department %></pre>
   </div>
 
   <div class="field">
-    <%= s.label :Course_Number %>
-    <pre><%= s.text_field :coursenumber %></pre>
+    <pre><%= s.label :Course_Number %>   <%= s.text_field :coursenumber %></pre>
   </div>
 
   <div class="field">
-    <%= s.label :Prerequisites %>
-    <pre><%= s.text_field :info_prerequisites %></pre>
+    <pre><%= s.label :Prerequisites %>   <%= s.text_field :info_prerequisites %></pre>
   </div>
 
   <div class="actions">

@@ -7,7 +7,7 @@
   </div>
 
   <div class="field">
-   <pre><%= s.label :Semester %>        <%= s.text_field :semester %></pre>
+   <pre><%= s.label :Semester %>        <%= s.select :semester, options_for_select(@course_infos), :prompt_text => "Select a category", :include_blank => true%></pre>
   </div>
 
   <div class="field">

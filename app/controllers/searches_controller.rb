@@ -1,6 +1,7 @@
 class SearchesController < ApplicationController
   def new
     @search = Search.new
+    @course_infos = CourseInfo.pluck(:semester).uniq
   end
 
   def create
@@ -10,6 +11,7 @@ class SearchesController < ApplicationController
 
   def show
     @search = Search.find(params[:id])
+    @course_infos = CourseInfo.pluck(:semester).uniq
   end
 
   def update
