@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 #Active Storage on Heroku
 #https://devcenter.heroku.com/articles/active-storage-on-heroku#ephemeral-disk
-gem "aws-sdk-s3", require: false
+#gem "aws-sdk-s3", require: false
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
