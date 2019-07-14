@@ -10,13 +10,13 @@
    <pre><%= s.label :Semester %>        <%= s.text_field :semester %></pre>
   </div>
 
-  <div class="field">
-    <pre><%= s.label :Department %>      <%= s.text_field :department %></pre>
-  </div>
+<!--  <div class="field">-->
+<!--    <pre><%#= s.label :Department %>      <%#= s.text_field :department %></pre>-->
+<!--  </div>-->
 
-  <div class="field">
-    <pre><%= s.label :Course_Number %>   <%= s.text_field :coursenumber %></pre>
-  </div>
+<!--  <div class="field">-->
+<!--    <pre><%#= s.label :Course_Number %>   <%#= s.text_field :coursenumber %></pre>-->
+<!--  </div>-->
 
   <div class="actions">
     <%= s.submit "Search", class: "btn btn-success my-2 my-sm-0" %>
@@ -39,7 +39,7 @@
         <tr>
           <th>Subject</th>
           <th>Course Number</th>
-          <th>Credits</th>
+<!--          <th>Credits</th>-->
           <th>Year</th>
           <th>Semester</th>
           <th>Prerequisites</th>
@@ -49,14 +49,14 @@
 
         <% @search.search_course_infos.each do |c| %>
           <tr>
-            <td><%= c.subject %></td>
-            <td><%= c.number %></td>
-            <td><%= c.credits %></td>
-            <td><%= c.year %></td>
             <td><%= c.department %></td>
-            <td><%= c.prerequisites %></td>
-            <td><%= c.corequisites %></td>
-            <td><%= link_to 'Details', course_path %></td>
+            <td><%= c.coursenumber %></td>
+<!--            <td><%#= c.credits %></td>-->
+            <td><%= c.year %></td>
+            <td><%= c.semester %></td>
+            <td><%= c.info_prerequisites %></td>
+            <td><%= c.info_corequisites %></td>
+<!--            <td><%#= link_to 'Details', course_path %></td>-->
           </tr>
         <% end %>
       </table>
