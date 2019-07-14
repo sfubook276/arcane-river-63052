@@ -1,9 +1,56 @@
-<h1>Awesome SFUBook Webapp</h1>
+<div id="welcome-view">
+  <div id="welcome-background" class="fade"></div>
+  <div class="welcome-container">
+    <div class="welcome-hero-container">
+      <div id="welcome-hero" class="fade">
+        <div class="welcome-title">
+          <h1>Awesome.</h1>
+        </div>
 
-<p>
-  Welcome to our awesome app! It's pretty awesome.
-</p>
+        <div id="welcome-title-desc" class="fade horizontal-translate">
+          Our website is pretty awesome.
+        </div>
 
-<p>
-  <%= link_to 'Courses', controller: 'courses' %>
-</p>
+        <%= link_to '<button class="welcome-courses-btn" type="button">
+          COURSES</button
+        >'.html_safe, controller: 'courses' %>
+
+        <i class="welcome-arrow-d"></i>
+      </div>
+    </div>
+
+    <div class="welcome-content">
+      <div id="welcome-details">
+        <div id="welcome-details-info" class="fade vertical-translate">
+          Our goal is to create a space for blah blah Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse
+        </div>
+
+        <div id="welcome-details-about" class="fade vertical-translate">
+          <div class="welcome-details-about-header">
+            ABOUT US
+          </div>
+          <div>
+            Made by blah blah sed do eiusmod tempor incididunt ut nim ad minim
+            veniam, quis nostrud
+          </div>
+        </div>
+
+        <%= link_to '
+        <div id="welcome-details-start" class="fade">
+          GET STARTED
+        </div>
+        '.html_safe, controller: 'courses' %>
+      </div>
+    </div>
+
+    <div class="welcome-footer">
+      awesome
+      <br />
+      <span class="welcome-copyright">&#9400; 2019 Copyright</span>
+    </div>
+  </div>
+</div>

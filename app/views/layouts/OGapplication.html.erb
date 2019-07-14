@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SFU Book</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%-#  line below enables bootstrap -%>
+    <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      /* The sidebar menu */
+      .sidenav {
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 160px; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #F7F7F7; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 80px;
+      }
+
+      /* The navigation menu links */
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+      }
+
+      /* Style page content */
+      .main {
+        margin-left: 160px; /* Same as the width of the sidebar */
+        padding: 0px 10px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+  <%-#  code from: https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/ -%>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href=/welcome>SFU Book</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href=/welcome>Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=/courses>Courses</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Views</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="List View">List View</a>
+              <a class="dropdown-item" href="Tree View">Tree View</a>
+              <a class="dropdown-item" href="Awesome Cloud View">Awesome Cloud View</a>
+            </div>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+        </li>
+      </ul>
+
+      <div class="form-inline mt-2 mt-md-0">
+        <%= form_tag courses_path, :method => 'get' do %>
+        <%= text_field_tag :search, nil, placeholder: "Course # or 'SUBJECT'", class: "form-control mr-sm-2"%>
+        <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0"%>
+      <% end %>
+
+
+      <div style="padding-left: 10px;">
+      <form class="form-inline">
+      <button class="btn btn-outline-primary" type="button">Login</button>
+      </div>
+      <div style="padding-left: 10px;">
+        <button class="btn btn-danger" type="button">Sign Up</button>
+      </div>
+      </form>
+
+    </div>
+  </nav>
+  <div class ="container">
+    <%= yield %>
+  </div>
+
+<!--chunk below is for side bar-->
+  <div class="sidenav">
+    <div class="col-12 col-md">
+      <div class="col-10 col-md">
+            <h5>Awesome Links</h5>
+              <a href="https://www.sfu.ca/students/calendar/2019/fall.html" target="_blank">Academic Calender</a>
+              <a href="https://www2.cs.sfu.ca/CourseCentral/276/stevenp/" target="_blank">276 Course Website</a>
+      </div>
+    </div>
+  </div>
+  </body>
+
+  <!--Bootstrap script files: required for dropdown menu to work-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
