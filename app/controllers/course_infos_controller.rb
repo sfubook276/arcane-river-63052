@@ -1,6 +1,7 @@
 class CourseInfosController < ApplicationController
   def index
-    @course_infos = CourseInfo.search(params[:search]).all.order(:department)
+    @course_infos = CourseInfo.search(params[:search])
+    # @course_infos = CourseInfo.search(params[:search]).all.order(:department)
   end
 
   def show
