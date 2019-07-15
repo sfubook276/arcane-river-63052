@@ -21,6 +21,6 @@ Rails.application.routes.draw do
   resources :years
   resources :searches
 
-  # resources :search, only: [:index]
+  # resources :search, only: [:index] DEFAULT PAGE
   root 'welcome#index'
 end

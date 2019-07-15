@@ -60,7 +60,7 @@
             <td><%= c.semester %></td>
             <td><%= c.info_prerequisites %></td>
             <td><%= c.info_corequisites %></td>
-            <td><%= link_to 'Details', course_info_path(@course_infos) %></td>
+            <td><%= link_to 'Details', 'http://www.sfu.ca/outlines.html?' + c.info_outlinepath  %> </td>
           </tr>
         <% end %>
       </table>
