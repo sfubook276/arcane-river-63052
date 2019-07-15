@@ -45,7 +45,7 @@
       <td><%= course_info.semester %></td>
       <td><%= course_info.info_prerequisites %></td>
       <td><%= course_info.info_corequisites %></td>
-      <td><%= link_to 'Details', search_path(@search) %></td>
+      <td><%= link_to 'Details', course_info_path(@course_infos) %></td>
     </tr>
   <% end %>
 
