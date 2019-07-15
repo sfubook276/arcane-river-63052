@@ -30,7 +30,7 @@
       <td><%= course_info.info_description %></td>
       <td><%= course_info.info_prerequisites %></td>
       <td><%= course_info.info_corequisites %></td>
-      <td><%= link_to 'Details', 'http://www.sfu.ca/outlines.html?'+ course_info.info_outlinepath %></td>
+      <td><%= link_to 'Details', 'http://www.sfu.ca/outlines.html?'+ course_info.info_outlinepath, target: :_blank%></td>
     </tr>
   <% end %>
 </table>
