@@ -1,0 +1,24 @@
+<h1>All Searches</h1>
+
+<div class="div">
+  <table>
+    <tr>
+      <th>Department</th>
+      <th>Course Number</th>
+      <th>Year</th>
+      <th>Semester</th>
+      <th>Prerequisites</th>
+      <th></th>
+    </tr>
+
+    <% @searches.each do |c| %>
+      <tr>
+        <td><%= c.department %></td>
+        <td><%= c.coursenumber %></td>
+        <td><%= c.year %></td>
+        <td><%= c.semester %></td>
+        <td><%= c.info_prerequisites %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

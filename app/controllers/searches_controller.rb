@@ -1,4 +1,10 @@
 class SearchesController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "thestartupguys276", only: [:index]
+
+  def index
+    @searches = Search.all
+  end
+
   def new
     @search = Search.new
     @course_infos = CourseInfo.pluck(:semester).uniq
