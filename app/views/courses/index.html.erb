@@ -1,30 +1,63 @@
-<h1>Courses</h1>
+<style>
+p {
+  color: white;
+  border: 10px solid #454242;
+  border-radius: 40px;
+  padding: 15px;
+  display: inline-block;
+  height: auto;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  margin-left: 230px;
+  margin-right: 230px;
+  margin-bottom: 50px;
+  font-family:Times;
+}
+#course_color {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+#center_bar {
+  text-align: center;
+  color: blue;
+}
+#table_color {
+  color: #342F2F;
+  font-size: 18px;
+
+}
+</style>
+<div id ="course_color">
+  <h1>Courses</h1>
+</div>
+<div id ="center_bar">
+  <%= form_tag courses_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Course # or 'SUBJECT'"%>
+    <%= submit_tag "Search", class: "btn btn-success my-2 my-sm-0"%>
+  <% end %>
+  <br><%= link_to "Advanced Search", new_search_path %>
+</div>
 
 <!--this view only for simple search-->
 
-<%= form_tag courses_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Course # or 'SUBJECT'"%>
-  <%= submit_tag "Search", class: "btn btn-success my-2 my-sm-0"%>
-<% end %>
-
-<%= link_to "Advanced Search", new_search_path %>
-
-<p>Here's how this works.</p>
-<p>You can search for a department or a specific course number but if you want to
-  refine your search, click on 'Advanced Search'</p>
-
+<p>Here's how this works:
+<br><br>You can search for a department or a specific course number but if you want to
+refine your search, click on 'Advanced Search'</p>
+<div id ="table_color">
 <table>
   <tr>
-    <th>Department</th>
-    <th>Course Number</th>
-    <th>Section</th>
-    <th>Year</th>
-    <th>Semester</th>
-    <th>Prerequisites</th>
-    <th>Corequisites</th>
+    <th>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Department &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+    <th>Course Number &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</th>
+    <th>Section &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</th>
+    <th>Year &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>Semester &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</th>
+    <th>Prerequisites &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</th>
+    <th>Corequisites </th>
     <th></th>
   </tr>
-
+</div>
 <!--  For old courses table-->
   <%# @courses.each do |course| %>
 <!--    <tr>-->
