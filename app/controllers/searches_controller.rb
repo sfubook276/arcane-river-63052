@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+  # authenication on search results page
   http_basic_authenticate_with name: "admin", password: "thestartupguys276", only: [:index]
 
   def index
