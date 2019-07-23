@@ -45,7 +45,7 @@ p {
 <p>Here's how this works:
 <br><br>You can search for a department or a specific course number but if you want to
 refine your search, click on 'Advanced Search'</p>
-<div id ="table_color">
+<div id ="table_color"><font color="FFFFFF">
 <table>
   <tr>
     <th>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Department &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
@@ -57,7 +57,7 @@ refine your search, click on 'Advanced Search'</p>
     <th>Corequisites </th>
     <th></th>
   </tr>
-</div>
+
 <!--  For old courses table-->
   <%# @courses.each do |course| %>
 <!--    <tr>-->
@@ -75,7 +75,7 @@ refine your search, click on 'Advanced Search'</p>
 <!--  for new course_infos table-->
   <% @course_infos.each do |course_info| %>
     <tr>
-    <font color="FFFFFF">
+    
       <td><%= course_info.department %></td>
       <td><%= course_info.coursenumber %></td>
       <td><%= course_info.section %></td>
@@ -85,8 +85,9 @@ refine your search, click on 'Advanced Search'</p>
       <td><%= course_info.info_corequisites %></td>
 <!--      <td><%#= link_to 'Details', course_info_path(@course_infos) %></td>-->
       <td><%= link_to 'Details', 'http://www.sfu.ca/outlines.html?' + course_info.info_outlinepath, target: :_blank %> </td>
-    </font>
     </tr>
   <% end %>
 
 </table>
+</font>
+</div>
