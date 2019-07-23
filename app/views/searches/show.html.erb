@@ -1,5 +1,17 @@
-<h1>Search Results</h1>
-
+<style>
+#advs_color {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+#move_right {
+  margin-left: 500px;
+}
+</style>
+<div id = advs_color>
+<h1>Advanced Search</h1>
+</div>
+<div id = move_right>
 <%= form_for @search, html: {class: "pure-form"} do |s| %>
 
   <div class="field">
@@ -7,7 +19,7 @@
   </div>
 
   <div class="field">
-   <pre><%= s.label :Semester %>        <%= s.select :semester, options_for_select(@course_infos), :prompt_text => "Select a category", :include_blank => true%></pre>
+    <pre><%= s.label :Semester %>        <%= s.select :semester, options_for_select(@course_infos), :include_blank => true, :prompt_text => "Select a category"%></pre>
   </div>
 
   <div class="field">
@@ -17,7 +29,7 @@
   <div class="field">
     <pre><%= s.label :Course_Number %>   <%= s.text_field :coursenumber %></pre>
   </div>
-  
+
   <div class="field">
     <pre><%= s.label :Prerequisites %>   <%= s.text_field :info_prerequisites %></pre>
   </div>
@@ -27,11 +39,9 @@
   </div>
 
 <% end %>
-<br>
 
-<p><%= link_to 'Back to Courses page', courses_path %><br>
-
-<%= link_to 'Back to Advanced Search', new_search_path %></p>
+<p><%= link_to 'Back', courses_path %></p>
+</div>
 
 <% if @search.search_course_infos.empty? %>
   <p>No Course Found</p>
