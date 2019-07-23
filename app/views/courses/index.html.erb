@@ -75,6 +75,7 @@ refine your search, click on 'Advanced Search'</p>
 <!--  for new course_infos table-->
   <% @course_infos.each do |course_info| %>
     <tr>
+    <font color="FFFFFF">
       <td><%= course_info.department %></td>
       <td><%= course_info.coursenumber %></td>
       <td><%= course_info.section %></td>
@@ -84,6 +85,7 @@ refine your search, click on 'Advanced Search'</p>
       <td><%= course_info.info_corequisites %></td>
 <!--      <td><%#= link_to 'Details', course_info_path(@course_infos) %></td>-->
       <td><%= link_to 'Details', 'http://www.sfu.ca/outlines.html?' + course_info.info_outlinepath, target: :_blank %> </td>
+    </font>
     </tr>
   <% end %>
 
